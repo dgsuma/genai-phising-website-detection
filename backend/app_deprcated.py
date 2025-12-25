@@ -313,12 +313,6 @@ def scan(req: ScanRequest):
     else:
         verdict = "SAFE"
 
-    # 6) Override (ONLY if NOT trusted)
-    # if not trusted:
-    #     if genai["verdict"] == "PHISHING":
-    #         verdict = "PHISHING"
-    #     elif genai["verdict"] == "SUSPICIOUS" and verdict == "SAFE":
-    #         verdict = "SUSPICIOUS"
     if not trusted:
         if genai.verdict == "PHISHING":
             verdict = "PHISHING"
