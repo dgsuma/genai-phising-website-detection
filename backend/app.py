@@ -331,8 +331,10 @@ def scan(req: ScanRequest):
         verdict=verdict,
         risk_score=round(final_score, 2),
         ml_score=ml_score,
-        genai_score=float(genai["genai_score"]),
-        reasons=(ml_reasons + genai["top_reasons"])[:6],
+        # genai_score=float(genai["genai_score"]),
+        # reasons=(ml_reasons + genai["top_reasons"])[:6],
+        genai_score=float(genai.genai_score),
+        reasons=(ml_reasons + genai.top_reasons)[:6],
         signals={"features": features, "trusted_domain": trusted},
         genai_summary=genai,
     )
