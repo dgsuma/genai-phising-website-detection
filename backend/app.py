@@ -302,7 +302,8 @@ def scan(req: ScanRequest):
     )
 
     # 5) Final score (weights)
-    final_score = 0.45 * ml_score + 0.55 * float(genai["genai_score"])
+    #final_score = 0.45 * ml_score + 0.55 * float(genai["genai_score"])
+    final_score = 0.45 * ml_score + 0.55 * genai.genai_score
 
     # score-based verdict
     if final_score >= 75:
