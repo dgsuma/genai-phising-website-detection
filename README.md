@@ -43,5 +43,6 @@ Start the GenAI Phishing Website Detection app:
 ```bash
 uvicorn backend.app:app --reload    
 uvicorn backend.app:app --reload --port 8080
+uvicorn backend.app:app --workers 4   # production use
 
 ```
