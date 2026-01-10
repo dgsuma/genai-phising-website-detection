@@ -41,5 +41,7 @@ uv pip install -r requirements.txt
 Start the GenAI Phishing Website Detection app:
 
 ```bash
-uvicorn backend.app:app --reload
+uvicorn backend.app:app --reload    
+uvicorn backend.app:app --reload --port 8080
+
 ```
