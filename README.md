@@ -44,5 +44,17 @@ Start the GenAI Phishing Website Detection app:
 uvicorn backend.app:app --reload    
 uvicorn backend.app:app --reload --port 8080
 uvicorn backend.app:app --workers 4   # production use
-
 ```
+
+## What happens when you run this?
+1. Uvicorn starts a local web server
+
+2. Loads your FastAPI app
+
+3. Listens (default) on:
+
+    http://127.0.0.1:8000
+
+4. Watches your files
+
+5. Reloads the server when files change
